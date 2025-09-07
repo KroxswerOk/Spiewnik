@@ -1,0 +1,25 @@
+
+:root{--bg:#f6f9ff;--accent:#0b74da;--muted:#6c757d;--card:#fff}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#111}
+header{background:var(--accent); color:white; padding:12px 16px; display:flex; align-items:center; justify-content:space-between}
+header h1{margin:0; font-size:20px}
+.controls{display:flex; gap:8px; align-items:center}
+.controls input[type="search"], .controls input{padding:6px 8px; border-radius:6px; border:0; min-width:200px}
+.controls button{background:rgba(255,255,255,0.12); color:white; border:1px solid rgba(255,255,255,0.12); padding:6px 8px; border-radius:6px; cursor:pointer}
+main{display:flex; gap:12px; padding:12px;}
+aside#listPanel{width:320px; max-height:70vh; overflow:auto}
+.songCard{background:var(--card); padding:10px; margin-bottom:8px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.06); cursor:pointer}
+.songCard h3{margin:0 0 6px 0}
+.songCard p{margin:0; color:var(--muted); font-size:13px}
+section#detailPanel{flex:1; background:var(--card); padding:12px; border-radius:8px; min-height:300px; box-shadow:0 1px 3px rgba(0,0,0,0.06)}
+section.empty{display:flex; align-items:center; justify-content:center; color:var(--muted)}
+.detailHeader{display:flex; justify-content:space-between; align-items:center; gap:12px}
+.detailControls{display:flex; gap:8px; align-items:center; font-size:14px}
+.songBody{white-space:pre-wrap; font-family:inherit; padding-top:8px; font-size:18px}
+.chordLine{font-family:monospace; color:var(--muted); margin-bottom:2px}
+footer{padding:12px; text-align:center; color:var(--muted); font-size:13px}
+@media (max-width:800px){
+  main{flex-direction:column}
+  aside#listPanel{width:100%; max-height:35vh}
+}

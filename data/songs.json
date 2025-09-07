@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "songs": [
+    {
+      "id": "8c743209-79e2-46ae-b0e9-e34d4769b88b",
+      "title": "Ogniskowy Rap",
+      "author": "Demo (public domain)",
+      "tags": [
+        "ognisko",
+        "marszowy"
+      ],
+      "key": "C",
+      "body": "[C]Kiedy iskra [G]tańczy w noc,\n[Am]Śpiew unosi [F]każdy głos,\n[C]Razem kroczmy [G]przez lasy,\n[Am]Drużynowe [F]czasem basy.",
+      "isPublicDomain": true
+    },
+    {
+      "id": "103e0326-4de9-404f-9266-30b4bd3cc66f",
+      "title": "Szlak i Wiatr",
+      "author": "Demo (public domain)",
+      "tags": [
+        "wędrówka",
+        "spokojna"
+      ],
+      "key": "G",
+      "body": "[G]Na szlaku [D]wiatr nas [Em]goni,\n[C]Mapa w dłoni, [G]słońce w [D]skroni,\n[Em]Krok po kroku, [C]prosto w [G]świat,\n[D]Bracie, siostro – [C]trzymaj [G]ład.",
+      "isPublicDomain": true
+    }
+  ]
+}

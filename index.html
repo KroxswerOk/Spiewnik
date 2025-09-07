@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Śpiewnik Harcerski — PWA</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0b74da" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Śpiewnik</h1>
+    <div class="controls">
+      <input id="search" placeholder="Szukaj tytułu, tagu, słowa…" />
+      <button id="importBtn">Import JSON</button>
+      <button id="exportBtn">Eksportuj JSON</button>
+      <input id="fileInput" type="file" accept="application/json" style="display:none" />
+    </div>
+  </header>
+  <main id="app">
+    <aside id="listPanel"></aside>
+    <section id="detailPanel" class="empty">
+      <div class="detailHeader">
+        <h2 id="songTitle">Wybierz piosenkę</h2>
+        <div class="detailControls">
+          <label>Akordy <input id="toggleChords" type="checkbox" checked/></label>
+          <label>Transpozycja <button id="down">-</button> <span id="transposeVal">0</span> <button id="up">+</button></label>
+          <label>Tekst <input id="fontSize" type="range" min="14" max="36" value="18"/></label>
+        </div>
+      </div>
+      <div id="songMeta"></div>
+      <pre id="songBody" class="songBody" ></pre>
+    </section>
+  </main>
+
+  <footer>Dodaj do ekranu głównego: Safari → Udostępnij → "Dodaj do ekranu początkowego".</footer>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(e=>console.log('SW reg failed', e));
+    }
+  </script>
+</body>
+</html>
